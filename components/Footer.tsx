@@ -23,6 +23,26 @@ const footerColumns = [
       { href: "/contact", label: "Contact" },
     ],
   },
+  {
+    title: "Legal",
+    links: [
+      { href: "/privacy-policy", label: "Privacy Policy" },
+      { href: "/terms-of-service", label: "Terms of Service" },
+      {
+        href: "/fair-lending-statement",
+        label: "Fair Lending Statement",
+      },
+      {
+        href: "/direct-lender-disclosure",
+        label: "Direct Lender Disclosure",
+      },
+      {
+        href: "/state-licenses-and-disclosures",
+        label: "State Licenses & Disclosures",
+      },
+      { href: "/e-sign-consent", label: "E-Sign Consent" },
+    ],
+  },
 ];
 
 export default function Footer() {
@@ -30,7 +50,7 @@ export default function Footer() {
     <footer className="bg-wash border-t border-line text-sm">
       <div className={`${container} py-16`}>
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10">
-          <div className="md:col-span-5">
+          <div className="md:col-span-3">
             <Logo />
             <p className="mt-4 text-muted leading-relaxed max-w-xs">
               Transparent personal loans with clear terms and a simple 3-step
