@@ -1,17 +1,12 @@
 import type { Metadata } from "next";
 import React from "react";
 import PageShell, { Muted } from "@/components/PageShell";
-import {
-  CtaBanner,
-  SectionHeader,
-  container,
-  section,
-} from "@/components/ui";
+import { CtaBanner, SectionHeader, container, section } from "@/components/ui";
 
 export const metadata: Metadata = {
-  title: "About Us | CrediFlow",
+  title: "About Us | LongLake Loans",
   description:
-    "Learn about CrediFlow's mission to make personal lending fast, fair, and transparent for responsible borrowers.",
+    "Learn about LongLake Loans's mission to make personal lending fast, fair, and transparent for responsible borrowers.",
 };
 
 const stats = [
@@ -43,7 +38,7 @@ const values = [
 const milestones = [
   {
     year: "2021",
-    title: "CrediFlow founded",
+    title: "LongLake Loans founded",
     desc: "Started by a small team of fintech engineers and lending veterans frustrated by slow, paper-heavy loan processes.",
   },
   {
@@ -73,7 +68,7 @@ const team = [
 export default function AboutPage() {
   return (
     <PageShell
-      eyebrow="About CrediFlow"
+      eyebrow="About LongLake Loans"
       title={
         <>
           Modern lending. <Muted>Built for responsible borrowers.</Muted>
@@ -87,7 +82,10 @@ export default function AboutPage() {
           className={`${container} grid grid-cols-2 md:grid-cols-4 gap-x-6 md:gap-x-0 md:divide-x divide-line`}
         >
           {stats.map((stat) => (
-            <div key={stat.label} className="py-8 md:py-10 md:px-8 md:first:pl-0">
+            <div
+              key={stat.label}
+              className="py-8 md:py-10 md:px-8 md:first:pl-0"
+            >
               <div className="text-3xl sm:text-4xl font-semibold tracking-tight">
                 {stat.value}
               </div>

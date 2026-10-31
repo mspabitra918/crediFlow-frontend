@@ -3,9 +3,9 @@ import React from "react";
 import LegalDocument from "@/components/LegalDocument";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | CrediFlow",
+  title: "Privacy Policy | LongLake Loans",
   description:
-    "How CrediFlow collects, uses, shares, and protects your personal information.",
+    "How LongLake Loans collects, uses, shares, and protects your personal information.",
 };
 
 export default function PrivacyPolicyPage() {

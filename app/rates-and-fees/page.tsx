@@ -5,9 +5,9 @@ import RepaymentCalculator from "@/components/RepaymentCalculator";
 import { CtaBanner, SectionHeader, container, section } from "@/components/ui";
 
 export const metadata: Metadata = {
-  title: "Rates & Fees | CrediFlow",
+  title: "Rates & Fees | LongLake Loans",
   description:
-    "Transparent CrediFlow personal loan rates and fees. APRs 10%, no origination fees, and no prepayment penalties.",
+    "Transparent LongLake Loans personal loan rates and fees. APRs 10%, no origination fees, and no prepayment penalties.",
 };
 
 const highlights = [

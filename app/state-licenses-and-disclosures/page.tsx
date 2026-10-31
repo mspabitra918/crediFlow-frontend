@@ -3,9 +3,9 @@ import React from "react";
 import LegalDocument from "@/components/LegalDocument";
 
 export const metadata: Metadata = {
-  title: "State Licenses & Disclosures | CrediFlow",
+  title: "State Licenses & Disclosures | LongLake Loans",
   description:
-    "Where CrediFlow is licensed to lend and the disclosures required in your state.",
+    "Where LongLake Loans is licensed to lend and the disclosures required in your state.",
 };
 
 export default function StateLicensesPage() {

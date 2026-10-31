@@ -2,17 +2,12 @@ import type { Metadata } from "next";
 import React from "react";
 import { Check } from "lucide-react";
 import PageShell, { Muted } from "@/components/PageShell";
-import {
-  CtaBanner,
-  SectionHeader,
-  container,
-  section,
-} from "@/components/ui";
+import { CtaBanner, SectionHeader, container, section } from "@/components/ui";
 
 export const metadata: Metadata = {
-  title: "How It Works | CrediFlow",
+  title: "How It Works | LongLake Loans",
   description:
-    "Apply for a CrediFlow personal loan in 3 simple steps: personal details, banking verification, and funds disbursement.",
+    "Apply for a LongLake Loans personal loan in 3 simple steps: personal details, banking verification, and funds disbursement.",
 };
 
 const steps = [
@@ -108,7 +103,7 @@ export default function HowItWorksPage() {
           From application to funds. <Muted>In three steps.</Muted>
         </>
       }
-      subtitle="No branch visits, no paperwork, no surprises. Here's exactly what happens when you apply with CrediFlow."
+      subtitle="No branch visits, no paperwork, no surprises. Here's exactly what happens when you apply with LongLake Loans."
     >
       {/* Detailed Steps */}
       {steps.map((step) => (

@@ -3,9 +3,9 @@ import React from "react";
 import LegalDocument from "@/components/LegalDocument";
 
 export const metadata: Metadata = {
-  title: "Terms of Service | CrediFlow",
+  title: "Terms of Service | LongLake Loans",
   description:
-    "The terms that govern your use of CrediFlow and your loan application.",
+    "The terms that govern your use of LongLake Loans and your loan application.",
 };
 
 export default function TermsOfServicePage() {

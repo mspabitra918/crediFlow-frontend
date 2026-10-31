@@ -3,9 +3,9 @@ import React from "react";
 import LegalDocument from "@/components/LegalDocument";
 
 export const metadata: Metadata = {
-  title: "E-Sign Consent | CrediFlow",
+  title: "E-Sign Consent | LongLake Loans",
   description:
-    "Consent to receive CrediFlow loan documents and sign your agreement electronically.",
+    "Consent to receive LongLake Loans loan documents and sign your agreement electronically.",
 };
 
 export default function ESignConsentPage() {

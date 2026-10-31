@@ -1,5 +1,7 @@
 // Legal documents shown on the sign & agreement page
 // TODO: replace with counsel-approved copy before launch
+import { companyContact } from "@/components/CompanyContact";
+
 export type Agreement = {
   id: string;
   title: string;
@@ -31,7 +33,7 @@ export const agreements: Agreement[] = [
       },
       {
         heading: "Security & your choices",
-        body: "Data is protected with 256-bit encryption in transit and at rest. You may request access to, correction of, or deletion of your information by contacting support@crediflow.com, subject to record-keeping requirements.",
+        body: "Data is protected with 256-bit encryption in transit and at rest. You may request access to, correction of, or deletion of your information by contacting support@longlakeloans.com, subject to record-keeping requirements.",
       },
     ],
   },
@@ -39,7 +41,7 @@ export const agreements: Agreement[] = [
     id: "terms-of-service",
     title: "Terms of Service",
     summary:
-      "The rules for using CrediFlow and your responsibilities as an applicant.",
+      "The rules for using LongLake Loans and your responsibilities as an applicant.",
     consent:
       "I agree to the Terms of Service and confirm that the information in my application is true and complete.",
     sections: [
@@ -69,7 +71,7 @@ export const agreements: Agreement[] = [
     sections: [
       {
         heading: "Equal Credit Opportunity",
-        body: "CrediFlow complies with the Equal Credit Opportunity Act. We do not discriminate on the basis of race, color, religion, national origin, sex, marital status, age (provided you can enter a contract), because income derives from public assistance, or because you have exercised rights under the Consumer Credit Protection Act.",
+        body: "LongLake Loans complies with the Equal Credit Opportunity Act. We do not discriminate on the basis of race, color, religion, national origin, sex, marital status, age (provided you can enter a contract), because income derives from public assistance, or because you have exercised rights under the Consumer Credit Protection Act.",
       },
       {
         heading: "Consistent decisions",
@@ -77,7 +79,7 @@ export const agreements: Agreement[] = [
       },
       {
         heading: "Questions or concerns",
-        body: "If you believe you have been treated unfairly, contact our compliance team at support@crediflow.com or the Consumer Financial Protection Bureau at consumerfinance.gov.",
+        body: "If you believe you have been treated unfairly, contact our compliance team at support@longlakeloans.com or the Consumer Financial Protection Bureau at consumerfinance.gov.",
       },
     ],
   },
@@ -89,11 +91,11 @@ export const agreements: Agreement[] = [
     sections: [
       {
         heading: "We are the lender",
-        body: "CrediFlow is a direct lender, not a broker or lead generator. Your application is reviewed, approved, and funded by CrediFlow, and is not sold to third-party lenders.",
+        body: "LongLake Loans is a direct lender, not a broker or lead generator. Your application is reviewed, approved, and funded by LongLake Loans, and is not sold to third-party lenders.",
       },
       {
         heading: "Servicing",
-        body: "CrediFlow services your loan for its entire term. All payments, questions, and account changes are handled directly by our team.",
+        body: "LongLake Loans services your loan for its entire term. All payments, questions, and account changes are handled directly by our team.",
       },
       {
         heading: "Cost disclosure",
@@ -105,13 +107,13 @@ export const agreements: Agreement[] = [
     id: "state-licenses-and-disclosures",
     title: "State Licenses & Disclosures",
     summary:
-      "Where CrediFlow is licensed to lend and the disclosures your state requires.",
+      "Where LongLake Loans is licensed to lend and the disclosures your state requires.",
     consent:
       "I acknowledge that I have received the State Licenses & Disclosures for my state of residence.",
     sections: [
       {
         heading: "Licensing",
-        body: "CrediFlow makes loans under licenses issued by the states in which it operates. Loans are only offered to residents of states where CrediFlow is licensed or otherwise authorized to lend. Our NMLS ID and license numbers are available on request and through NMLS Consumer Access at nmlsconsumeraccess.org.",
+        body: "LongLake Loans makes loans under licenses issued by the states in which it operates. Loans are only offered to residents of states where LongLake Loans is licensed or otherwise authorized to lend. Our NMLS ID and license numbers are available on request and through NMLS Consumer Access at nmlsconsumeraccess.org.",
       },
       {
         heading: "Availability by state",
@@ -123,7 +125,7 @@ export const agreements: Agreement[] = [
       },
       {
         heading: "Complaints",
-        body: "If you have a complaint, contact us first at support@crediflow.com. You may also contact the financial regulator in your state of residence, whose contact details are listed in your loan agreement.",
+        body: "If you have a complaint, contact us first at support@longlakeloans.com. You may also contact the financial regulator in your state of residence, whose contact details are listed in your loan agreement.",
       },
     ],
   },
@@ -137,7 +139,7 @@ export const agreements: Agreement[] = [
     sections: [
       {
         heading: "Scope of consent",
-        body: "Under the federal Electronic Signatures in Global and National Commerce Act (E-SIGN Act), you agree that CrediFlow may provide your loan agreement, disclosures, notices, statements, and other communications electronically, and that you may sign documents electronically.",
+        body: "Under the federal Electronic Signatures in Global and National Commerce Act (E-SIGN Act), you agree that LongLake Loans may provide your loan agreement, disclosures, notices, statements, and other communications electronically, and that you may sign documents electronically.",
       },
       {
         heading: "Hardware & software requirements",
@@ -145,7 +147,7 @@ export const agreements: Agreement[] = [
       },
       {
         heading: "Paper copies",
-        body: "You may request a paper copy of any electronic document at no charge by contacting support@crediflow.com or calling +1 (800) 555-CREDI.",
+        body: `You may request a paper copy of any electronic document at no charge by contacting support@longlakeloans.com or calling ${companyContact.phones.tollFree.display}.`,
       },
       {
         heading: "Withdrawing consent",

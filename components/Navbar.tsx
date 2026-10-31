@@ -17,10 +17,10 @@ export function Logo() {
   return (
     <Link href="/" className="flex items-center gap-2.5">
       <span className="w-6 h-6 bg-ink text-paper flex items-center justify-center text-xs font-bold">
-        C
+        L
       </span>
       <span className="text-base font-semibold tracking-tight text-ink">
-        CrediFlow
+        LongLake Loans
       </span>
     </Link>
   );
@@ -52,10 +52,19 @@ export default function Navbar() {
           ))}
         </div>
 
-        <div className="hidden md:flex items-center">
-          <button className="bg-ink text-paper px-5 py-2 text-sm font-medium hover:bg-neutral-700 transition-colors">
+        <div className="hidden lg:flex items-center gap-3">
+          <Link
+            href="/track-loan"
+            className="bg-ink text-paper px-5 py-2 text-sm font-medium hover:bg-neutral-700 transition-colors"
+          >
+            Track Your Loan
+          </Link>
+          <Link
+            href="/apply"
+            className="bg-ink text-paper px-5 py-2 text-sm font-medium hover:bg-neutral-700 transition-colors"
+          >
             Apply now
-          </button>
+          </Link>
         </div>
 
         {/* Mobile Menu Toggle */}
@@ -88,9 +97,20 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
-            <button className={`${buttonPrimary} w-full mt-5`}>
+            <Link
+              href="/track-loan"
+              onClick={() => setMobileMenuOpen(false)}
+              className={`${buttonPrimary} w-full mt-5`}
+            >
+              Track Your Loan
+            </Link>
+            <Link
+              href="/apply"
+              onClick={() => setMobileMenuOpen(false)}
+              className={`${buttonPrimary} w-full mt-5`}
+            >
               Apply now
-            </button>
+            </Link>
           </div>
         </div>
       )}

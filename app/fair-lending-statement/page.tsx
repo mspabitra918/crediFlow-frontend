@@ -3,9 +3,9 @@ import React from "react";
 import LegalDocument from "@/components/LegalDocument";
 
 export const metadata: Metadata = {
-  title: "Fair Lending Statement | CrediFlow",
+  title: "Fair Lending Statement | LongLake Loans",
   description:
-    "CrediFlow's commitment to equal credit opportunity for every applicant.",
+    "LongLake Loans's commitment to equal credit opportunity for every applicant.",
 };
 
 export default function FairLendingStatementPage() {

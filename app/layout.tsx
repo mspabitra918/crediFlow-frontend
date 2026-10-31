@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "CrediFlow | Personal Loans in 3 Simple Steps",
+  title: "LongLake Loans | Personal Loans in 3 Simple Steps",
   description:
     "Transparent personal loans from $1,000 to $35,000 with no origination fees and same-day funding.",
 };

@@ -90,9 +90,12 @@ export function CtaBanner({
             {text}
           </p>
         </div>
-        <button className="inline-flex items-center justify-center gap-2 bg-paper text-ink px-6 py-3 text-sm font-medium hover:bg-neutral-200 transition-colors shrink-0">
+        <Link
+          href="/apply"
+          className="inline-flex items-center justify-center gap-2 bg-paper text-ink px-6 py-3 text-sm font-medium hover:bg-neutral-200 transition-colors shrink-0"
+        >
           {buttonLabel} <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
-        </button>
+        </Link>
       </div>
     </section>
   );

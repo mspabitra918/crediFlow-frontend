@@ -30,3 +30,14 @@ body {
   background: var(--color-ink);
   color: var(--color-paper);
 }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}

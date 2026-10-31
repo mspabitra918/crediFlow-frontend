@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { Logo } from "@/components/Navbar";
 import { container } from "@/components/ui";
+import { companyContact } from "./CompanyContact";
 
 const footerColumns = [
   {
@@ -82,22 +83,38 @@ export default function Footer() {
             <h5 className="text-xs font-medium uppercase tracking-[0.18em] text-muted mb-4">
               Support
             </h5>
-            <ul className="space-y-2.5 text-body">
-              <li>
+            <div className="space-y-3 text-body">
+              <a
+                href={companyContact.email.href}
+                className="block text-muted transition-colors hover:text-ink"
+              >
+                {companyContact.email.display}
+              </a>
+
+              <p className="text-muted">{companyContact.address}</p>
+
+              <div>
+                <p className="text-sm text-muted">Toll-Free</p>
                 <a
-                  href="mailto:support@crediflow.com"
-                  className="hover:text-ink"
+                  href={companyContact.phones.tollFree.href}
+                  className="text-muted transition-colors hover:text-ink"
                 >
-                  support@crediflow.com
+                  {companyContact.phones.tollFree.display}
                 </a>
-              </li>
-              <li>
-                <a href="tel:+18005552733" className="hover:text-ink">
-                  +1 (800) 555-CREDI
+              </div>
+
+              <div>
+                <p className="text-sm text-muted">Local</p>
+                <a
+                  href={companyContact.phones.local.href}
+                  className="text-muted transition-colors hover:text-ink"
+                >
+                  {companyContact.phones.local.display}
                 </a>
-              </li>
-              <li className="text-muted">Mon – Fri, 8 AM – 8 PM EST</li>
-            </ul>
+              </div>
+
+              <p className="text-muted">Monday – Friday, 8 AM – 8 PM EST</p>
+            </div>
           </div>
         </div>
 
@@ -107,7 +124,9 @@ export default function Footer() {
             eligibility verification, bank authorization, and underwriting
             guidelines.
           </p>
-          <p className="shrink-0">© 2026 CrediFlow. All rights reserved.</p>
+          <p className="shrink-0">
+            © 2026 LongLake Loans. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>

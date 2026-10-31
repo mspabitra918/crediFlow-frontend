@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import PageShell from "@/components/PageShell";
 import { agreements } from "@/components/agreements";
 import { CtaBanner, Eyebrow, container, section } from "@/components/ui";
+import { companyContact } from "@/components/CompanyContact";
 
 export const lastUpdated = "October 1, 2026";
 
@@ -72,12 +73,28 @@ export default function LegalDocument({ id }: { id: string }) {
             <div className="border-t border-line pt-8 text-sm text-body leading-relaxed max-w-2xl">
               Questions about this document? Email{" "}
               <a
-                href="mailto:support@crediflow.com"
+                href="mailto:support@longlakeloans.com"
                 className="text-ink underline underline-offset-4"
               >
-                support@crediflow.com
+                support@longlakeloans.com
               </a>{" "}
-              or call +1 (800) 555-CREDI.
+              or call{" "}
+              <a
+                href={companyContact.phones.tollFree.href}
+                className="text-ink underline underline-offset-4"
+                aria-label={`Call Toll-Free ${companyContact.phones.tollFree.display}`}
+              >
+                {companyContact.phones.tollFree.display}
+              </a>{" "}
+              (toll-free) or{" "}
+              <a
+                href={companyContact.phones.local.href}
+                className="text-ink underline underline-offset-4"
+                aria-label={`Call Local ${companyContact.phones.local.display}`}
+              >
+                {companyContact.phones.local.display}
+              </a>{" "}
+              (local).
             </div>
           </article>
         </div>

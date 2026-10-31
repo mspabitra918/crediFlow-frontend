@@ -153,10 +153,10 @@ export default function T() {
               — often within one business day.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-3">
-              <button className={buttonPrimary}>
+              <Link href="/apply" className={buttonPrimary}>
                 Start your application{" "}
                 <ArrowRight className="w-4 h-4" strokeWidth={1.5} />
-              </button>
+              </Link>
               <Link href="/how-it-works" className={buttonSecondary}>
                 How it works
               </Link>
@@ -233,9 +233,12 @@ export default function T() {
                 </span>
               </div>
 
-              <button className={`${buttonPrimary} w-full mt-6`}>
+              <Link
+                href={`/apply?amount=${loanAmount}`}
+                className={`${buttonPrimary} w-full mt-6`}
+              >
                 Apply for ${loanAmount.toLocaleString()}
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -304,7 +307,7 @@ export default function T() {
       <section id="why-us" className={`${section} bg-wash`}>
         <div className={container}>
           <SectionHeader
-            eyebrow="02 — Why CrediFlow"
+            eyebrow="02 — Why LongLake Loans"
             title="Lending designed around the borrower."
           />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border-t border-l border-line">
@@ -387,7 +390,7 @@ export default function T() {
           <SectionHeader
             eyebrow="05 — About"
             title="Modernizing loan access for responsible borrowers."
-            text="CrediFlow was built to replace long lines and tedious paperwork with a clear 3-step online flow. We prioritize data security, fair terms, and rapid disbursement."
+            text="LongLake Loans was built to replace long lines and tedious paperwork with a clear 3-step online flow. We prioritize data security, fair terms, and rapid disbursement."
           />
           <div className="lg:ml-[33.333%] lg:pl-8">
             <TextLink href="/about">Learn more about us</TextLink>

@@ -4,11 +4,12 @@ import Link from "next/link";
 import { Plus } from "lucide-react";
 import PageShell, { Muted } from "@/components/PageShell";
 import { buttonPrimary, buttonSecondary, container } from "@/components/ui";
+import { companyContact } from "@/components/CompanyContact";
 
 export const metadata: Metadata = {
-  title: "FAQ | CrediFlow",
+  title: "FAQ | LongLake Loans",
   description:
-    "Answers to common questions about applying, eligibility, rates, repayment, and security at CrediFlow.",
+    "Answers to common questions about applying, eligibility, rates, repayment, and security at LongLake Loans.",
 };
 
 const faqCategories = [
@@ -84,7 +85,7 @@ const faqCategories = [
       },
       {
         q: "Do you store my online banking password?",
-        a: "Never. Bank verification is handled through a secure, read-only connection and your login credentials are never shared with or stored by CrediFlow.",
+        a: "Never. Bank verification is handled through a secure, read-only connection and your login credentials are never shared with or stored by LongLake Loans.",
       },
     ],
   },
@@ -99,7 +100,7 @@ export default function FaqPage() {
           Questions, <Muted>answered.</Muted>
         </>
       }
-      subtitle="Everything you need to know about applying, getting funded, and repaying your CrediFlow loan."
+      subtitle="Everything you need to know about applying, getting funded, and repaying your LongLake Loans loan."
     >
       <section className="border-t border-line py-20 sm:py-28">
         <div className={`${container} grid grid-cols-1 lg:grid-cols-12 gap-10`}>
@@ -159,8 +160,12 @@ export default function FaqPage() {
                 <Link href="/contact" className={buttonSecondary}>
                   Contact us
                 </Link>
-                <a href="tel:+18005552733" className={buttonPrimary}>
-                  Call us
+                <a
+                  href={companyContact.phones.tollFree.href}
+                  aria-label={`Call Toll-Free ${companyContact.phones.tollFree.display}`}
+                  className={buttonPrimary}
+                >
+                  Call {companyContact.phones.tollFree.display}
                 </a>
               </div>
             </div>

@@ -3,32 +3,13 @@ import React from "react";
 import PageShell, { Muted } from "@/components/PageShell";
 import ContactForm from "@/components/ContactForm";
 import { Eyebrow, TextLink, container } from "@/components/ui";
+import { CompanyContactInfo, companyContact } from "@/components/CompanyContact";
 
 export const metadata: Metadata = {
-  title: "Contact Us | CrediFlow",
+  title: "Contact Us | LongLake Loans",
   description:
-    "Get in touch with the CrediFlow support team by phone, email, or our online contact form.",
+    "Get in touch with the LongLake Loans support team by phone, email, or our online contact form.",
 };
-
-const contactMethods = [
-  {
-    title: "Phone",
-    detail: "+1 (800) 555-CREDI",
-    href: "tel:+18005552733",
-    note: "Fastest for urgent questions",
-  },
-  {
-    title: "Email",
-    detail: "support@crediflow.com",
-    href: "mailto:support@crediflow.com",
-    note: "We reply within 1 business day",
-  },
-  {
-    title: "Office",
-    detail: "100 Market Street, Suite 400, San Francisco, CA 94105",
-    note: "Visits by appointment only",
-  },
-];
 
 const hours = [
   { day: "Monday – Friday", time: "8 AM – 8 PM EST" },
@@ -52,21 +33,35 @@ export default function ContactPage() {
         <div
           className={`${container} grid grid-cols-1 md:grid-cols-3 md:divide-x divide-line`}
         >
-          {contactMethods.map((method) => (
+          {[
+            { title: "Phone", note: "Fastest for urgent questions" },
+            { title: "Email", note: "We reply within 1 business day" },
+            { title: "Office", note: "Visits by appointment only" },
+          ].map((method) => (
             <div
               key={method.title}
               className="py-10 md:px-8 md:first:pl-0 border-b md:border-b-0 border-line last:border-b-0"
             >
               <Eyebrow>{method.title}</Eyebrow>
-              {method.href ? (
+              {method.title === "Phone" ? (
+                <CompanyContactInfo
+                  phoneTypes={["tollFree", "local"]}
+                  className="mt-4 space-y-2"
+                  linkClassName="block text-lg font-medium underline-offset-4 hover:underline wrap-break-word"
+                />
+              ) : method.title === "Email" ? (
                 <a
-                  href={method.href}
+                  href={companyContact.email.href}
                   className="mt-4 block text-lg font-medium underline-offset-4 hover:underline wrap-break-word"
                 >
-                  {method.detail}
+                  {companyContact.email.display}
                 </a>
               ) : (
-                <p className="mt-4 text-lg font-medium">{method.detail}</p>
+                <CompanyContactInfo
+                  includeAddress
+                  className="mt-4 text-lg font-medium"
+                  addressClassName="wrap-break-word"
+                />
               )}
               <p className="mt-2 text-sm text-muted">{method.note}</p>
             </div>
@@ -83,8 +78,8 @@ export default function ContactPage() {
                 Send us a message.
               </h2>
               <p className="mt-4 text-sm text-body leading-relaxed">
-                Fill out the form and the right member of our team will get
-                back to you.
+                Fill out the form and the right member of our team will get back
+                to you.
               </p>
             </div>
 
